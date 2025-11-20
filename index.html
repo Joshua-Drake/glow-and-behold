@@ -1,3 +1,15 @@
+    <!-- Modal for More Info -->
+    <div id="info-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close">&times;</button>
+            <h2 class="modal-title">Product Information</h2>
+            <div class="modal-body">
+                <p id="modal-product-name"></p>
+                <p id="modal-product-description"></p>
+                <p id="modal-product-price"></p>
+            </div>
+        </div>
+    </div>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +33,7 @@
 
             <nav class="main-nav">
                 <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="shop/shop.html">Shop</a></li>
                     <li><a href="about/about.html">About Us</a></li>
                     <li><a href="educate/educate.html">Educate</a></li>
@@ -39,13 +52,14 @@
                     </svg>
                 </button>
                 <button class="icon-btn cart-btn" aria-label="Shopping cart">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <path d="M16 10a4 4 0 0 1-8 0"></path>
-                    </svg>
-                    <span class="cart-count">0</span>
-                </button>
+                    <a href="cart/cart.html" class="icon-btn cart-btn" aria-label="Shopping cart">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                        <span class="cart-count">0</span>
+                    </a>
             </div>
         </div>
     </header>
@@ -161,10 +175,15 @@
                     </svg>
                 </button>
             </div>
+
         </section>
 
         <section class="promo-banner">
-            <p class="promo-text">Ready to cut the crap?</p>
+            <p class="promo-text">The only thing shady about us is our packaging</p>
+        </section>
+
+        <section class="promo-banner">
+            <p class="promo-text">Ready to cut the crap? ✂️💩</p>
             <button class="btn btn-cta">Find Out More</button>
         </section>
     </main>

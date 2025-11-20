@@ -1,3 +1,36 @@
+// Modal logic for More Info
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('info-modal');
+    if (!modal) return;
+    const modalClose = modal.querySelector('.modal-close');
+    const modalProductName = document.getElementById('modal-product-name');
+    const modalProductDescription = document.getElementById('modal-product-description');
+    const modalProductPrice = document.getElementById('modal-product-price');
+    const moreInfoButtons = document.querySelectorAll('.more-info');
+    moreInfoButtons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            const card = btn.closest('.product-card');
+            const name = card.querySelector('.product-name').textContent;
+            const desc = card.querySelector('.product-description').textContent;
+            const price = card.querySelector('.product-price').textContent;
+            modalProductName.textContent = name;
+            modalProductDescription.textContent = desc;
+            modalProductPrice.textContent = price;
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    modalClose.addEventListener('click', function() {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+    });
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+    });
+});
 class ProductCarousel {
     constructor() {
         this.track = document.querySelector('.carousel-track');
@@ -124,7 +157,7 @@ class ShoppingCart {
             btn.addEventListener('click', (e) => this.addToCart(e));
         });
 
-        this.cartBtn.addEventListener('click', () => this.viewCart());
+        // Cart button is now a link; no JS event needed
     }
 
     addToCart(e) {
@@ -155,7 +188,7 @@ class ShoppingCart {
     }
 
     viewCart() {
-        alert(`You have ${this.count} item(s) in your cart.\n\nCart functionality coming soon!`);
+        // No longer needed; cart page exists
     }
 }
 
@@ -185,18 +218,11 @@ class ProductInfo {
 
     setupEventListeners() {
         const moreInfoButtons = document.querySelectorAll('.more-info');
-        moreInfoButtons.forEach(btn => {
-            btn.addEventListener('click', (e) => this.showInfo(e));
-        });
+        // Modal logic now handles More Info
     }
 
     showInfo(e) {
-        const productCard = e.target.closest('.product-card');
-        const productName = productCard.querySelector('.product-name').textContent;
-        const productDescription = productCard.querySelector('.product-description').textContent;
-        const productPrice = productCard.querySelector('.product-price').textContent;
-        
-        alert(`${productName}\n\n${productDescription}\n\nPrice: ${productPrice}\n\nDetailed product page coming soon!`);
+        // No longer used; replaced by modal
     }
 }
 
