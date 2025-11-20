@@ -39,6 +39,9 @@
                         <path d="m21 21-4.35-4.35"></path>
                     </svg>
                 </button>
+                <form class="search-bar" id="search-bar" autocomplete="off" onsubmit="return false;">
+                    <input type="text" placeholder="Search products..." aria-label="Search products" />
+                </form>
                 <a href="../cart/cart.html" class="icon-btn cart-btn" aria-label="Shopping cart">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
@@ -56,18 +59,37 @@
             <h2 class="section-title">Contact Us</h2>
             <div class="content-wrapper">
                 <p>We'd love to hear from you! Whether you have questions about our products, need skincare advice, or want to share your feedback, we're here to help.</p>
-                
-                <h3>Get In Touch</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                
-                <h3>Customer Service</h3>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                
-                <h3>Business Inquiries</h3>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                
-                <h3>Visit Our Store</h3>
-                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+
+                <div class="contact-details">
+                    <h3>Contact Information</h3>
+                    <ul>
+                        <li><strong>Email:</strong> <a href="mailto:hello@glowandbehold.co.uk">hello@glowandbehold.co.uk</a></li>
+                        <li><strong>Phone:</strong> <a href="tel:+442071234567">020 7123 4567</a></li>
+                        <li><strong>Customer Service Hours:</strong> Mon–Fri, 9am–5pm (UK time)</li>
+                    </ul>
+
+                    <h3>Business Address</h3>
+                    <ul>
+                        <li><strong>Business Address:</strong> Glow & Behold Ltd., 42 Green Lane, London, W1A 1AA, United Kingdom</li>
+                    </ul>
+
+                    <h3>Social Media</h3>
+                    <ul>
+                        <li><strong>Instagram:</strong> <a href="#">@glowandbeholduk</a></li>
+                        <li><strong>Facebook:</strong> <a href="#">facebook.com/glowandbehold</a></li>
+                    </ul>
+
+                    <h3>Enquiry Form</h3>
+                    <form class="contact-form" autocomplete="off" onsubmit="return false;">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@email.co.uk" required>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="How can we help?" required></textarea>
+                        <button type="submit" class="btn btn-primary" disabled>Send Message</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>

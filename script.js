@@ -1,5 +1,52 @@
+// Dynamically load blog entries for the blog page
+document.addEventListener('DOMContentLoaded', function() {
+    const blogList = document.getElementById('blog-list');
+    if (blogList) {
+        // List of blog entries (manually maintained, as static HTML cannot read directory)
+        const entries = [
+            {
+                title: 'Learning to Formulate',
+                date: '10 January 2026',
+                desc: 'A personal journey into the art and science of skincare formulation, and the lessons learned along the way.',
+                link: 'blog_entries/learning-to-formulate.html'
+            },
+            {
+                title: 'The Limits of Carrier Oils',
+                date: '24 January 2026',
+                desc: 'Exploring the strengths and limitations of carrier oils in natural skincare, and why balance matters.',
+                link: 'blog_entries/limits-of-carrier-oils.html'
+            }
+        ];
+        blogList.innerHTML = entries.map(entry => `
+            <li>
+                <span class="blog-title">${entry.title}</span>
+                <span class="blog-meta">${entry.date}</span>
+                <span class="blog-desc">${entry.desc}</span>
+                <a class="blog-link" href="${entry.link}">Read more &rarr;</a>
+            </li>
+        `).join('');
+    }
+});
 // Modal logic for More Info
 document.addEventListener('DOMContentLoaded', function() {
+        // Sliding search bar logic
+        const searchBtn = document.querySelector('.search-btn');
+        const searchBar = document.getElementById('search-bar');
+        if (searchBtn && searchBar) {
+            searchBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                searchBar.classList.toggle('open');
+                if (searchBar.classList.contains('open')) {
+                    searchBar.querySelector('input').focus();
+                }
+            });
+            // Close search bar when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!searchBar.contains(e.target) && !searchBtn.contains(e.target)) {
+                    searchBar.classList.remove('open');
+                }
+            });
+        }
     const modal = document.getElementById('info-modal');
     if (!modal) return;
     const modalClose = modal.querySelector('.modal-close');
@@ -199,15 +246,7 @@ class Search {
     }
 
     setupEventListeners() {
-        this.searchBtn.addEventListener('click', () => this.openSearch());
-    }
-
-    openSearch() {
-        const searchTerm = prompt('Search for products:');
-        if (searchTerm) {
-            console.log(`Searching for: ${searchTerm}`);
-            alert(`Search functionality coming soon!\nYou searched for: "${searchTerm}"`);
-        }
+        // No prompt or alert; handled by sliding bar UI
     }
 }
 

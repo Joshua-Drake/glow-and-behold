@@ -51,6 +51,9 @@
                         <path d="m21 21-4.35-4.35"></path>
                     </svg>
                 </button>
+                <form class="search-bar" id="search-bar" autocomplete="off" onsubmit="return false;">
+                    <input type="text" placeholder="Search products..." aria-label="Search products" />
+                </form>
                 <a href="cart/cart.html" class="icon-btn cart-btn" aria-label="Shopping cart">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
@@ -78,7 +81,7 @@
                     <div class="carousel-track">
                         <div class="product-card">
                             <div class="product-image">
-                                <div class="placeholder-image">Product Image</div>
+                                <img src="images/glow_serum.png" alt="Radiant Glow Serum" class="product-image" />
                             </div>
                             <div class="product-info">
                                 <h3 class="product-name">Radiant Glow Serum</h3>
@@ -93,7 +96,7 @@
 
                         <div class="product-card">
                             <div class="product-image">
-                                <div class="placeholder-image">Product Image</div>
+                                <img src="images/hydration_cream.png" alt="Pure Hydration Cream" class="product-image" />
                             </div>
                             <div class="product-info">
                                 <h3 class="product-name">Pure Hydration Cream</h3>
@@ -108,7 +111,7 @@
 
                         <div class="product-card">
                             <div class="product-image">
-                                <div class="placeholder-image">Product Image</div>
+                                <img src="images/renewal_cleanser.png" alt="Gentle Cleansing Balm" class="product-image" />
                             </div>
                             <div class="product-info">
                                 <h3 class="product-name">Gentle Cleansing Balm</h3>
@@ -123,7 +126,7 @@
 
                         <div class="product-card">
                             <div class="product-image">
-                                <div class="placeholder-image">Product Image</div>
+                                <img src="images/botanical_balance_toner.png" alt="Revive Eye Treatment" class="product-image" />
                             </div>
                             <div class="product-info">
                                 <h3 class="product-name">Revive Eye Treatment</h3>
@@ -138,7 +141,7 @@
 
                         <div class="product-card">
                             <div class="product-image">
-                                <div class="placeholder-image">Product Image</div>
+                                <img src="images/restore_balm.png" alt="Bright Morning Toner" class="product-image" />
                             </div>
                             <div class="product-info">
                                 <h3 class="product-name">Bright Morning Toner</h3>
@@ -153,7 +156,7 @@
 
                         <div class="product-card">
                             <div class="product-image">
-                                <div class="placeholder-image">Product Image</div>
+                                <img src="images/night_repair_oil.png" alt="Night Repair Oil" class="product-image" />
                             </div>
                             <div class="product-info">
                                 <h3 class="product-name">Night Repair Oil</h3>
@@ -188,7 +191,7 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2025 Glow & Behold. All natural, all good.</p>
+        <p class="footer-copyright">&copy; 2025 Glow & Behold. All natural, all good.</p>
     </footer>
 
     <script src="script.js"></script>
