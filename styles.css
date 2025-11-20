@@ -289,25 +289,30 @@ main {
 
 .section-title {
     text-align: center;
-    font-size: 2.75rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 3.5rem;
-    letter-spacing: -1px;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--green-2);
+    text-shadow: 0 2px 12px var(--green-4), 0 1px 0 #fff;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1.5px;
     position: relative;
+    z-index: 2;
+    line-height: 1.1;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.5em;
+    background: none;
 }
 
 .section-title::after {
     content: '';
     display: block;
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-    margin: 1.5rem auto 0;
-    border-radius: 2px;
+    width: 60px;
+    height: 5px;
+    background: linear-gradient(90deg, var(--green-2) 60%, var(--green-3) 100%);
+    margin: 1.2rem auto 0;
+    border-radius: 3px;
+    box-shadow: 0 2px 8px var(--green-4);
 }
 
 

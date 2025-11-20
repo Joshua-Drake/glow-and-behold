@@ -7,23 +7,46 @@
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <div class="header-container">
-        <div class="brand-container">
-            <span class="brand-name">Glow & Behold</span>
+    <header class="header">
+        <div class="header-container">
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="brand-container">
+                <h1 class="brand-name"><a href="../index.html">Glow & Behold</a></h1>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../shop/shop.html">Shop</a></li>
+                    <li><a href="../about/about.html">About Us</a></li>
+                    <li><a href="../educate/educate.html">Educate</a></li>
+                    <li><a href="../contact/contact.html">Contact Us</a></li>
+                    <li><a href="../events/events.html">Events</a></li>
+                    <li><a href="../blog/blog.html">Blog</a></li>
+                    <li><a href="../story/story.html">Our Story</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="icon-btn search-btn" aria-label="Search products">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <a href="../cart/cart.html" class="icon-btn cart-btn" aria-label="Shopping cart">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
         </div>
-        <nav class="main-nav">
-            <ul class="nav-list">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="../about/about.html">About Us</a></li>
-                <li><a href="../educate/educate.html">Educate</a></li>
-                <li><a href="../contact/contact.html">Contact Us</a></li>
-                <li><a href="../events/events.html">Events</a></li>
-                <li><a href="../blog/blog.html">Blog</a></li>
-                <li><a href="../story/story.html">Our Story</a></li>
-            </ul>
-        </nav>
-    </div>
+    </header>
     <main>
         <section class="page-content">
             <div class="content-wrapper">
