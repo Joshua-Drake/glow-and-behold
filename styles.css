@@ -933,10 +933,27 @@ main {
 .promo-banner .btn-cta:active .btn-cta-text {
     transform: scale(1.14);
 }
+
 .promo-banner .btn-cta:hover, .promo-banner .btn-cta:focus, .promo-banner .btn-cta:active {
     background: var(--accent-color) !important;
     color: #fff !important;
     box-shadow: none !important;
+}
+
+/* Center and stack promo icons in banners */
+.promo-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 2.2rem;
+    margin: 0.2em 0 1em 0;
+    width: 100%;
+}
+.promo-icons span {
+    display: inline-block;
+    text-align: center;
 }
 
 .cta-banner {
