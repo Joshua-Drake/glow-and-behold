@@ -1,3 +1,12 @@
+/* Ensure copyright text is dark green and consistent */
+.footer-copyright {
+    color: var(--green-1);
+    font-weight: 600;
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+}
 /* Ensure home page carousel product images retain aspect ratio and are not stretched */
 .carousel-track .product-image img.product-image {
     width: 100%;
@@ -789,19 +798,6 @@ main {
     overflow: hidden;
 }
 
-.btn::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    transform: translate(-50%, -50%);
-    transition: width 0.5s, height 0.5s;
-}
-
 .btn:hover::before {
     width: 300px;
     height: 300px;
@@ -856,20 +852,30 @@ main {
     opacity: 1;
 }
 
+
 .btn-cta {
     background: var(--green-3);
     color: var(--white);
     padding: 1.25rem 3rem;
     font-size: 1.125rem;
-    box-shadow: 0 8px 24px var(--green-4);
     letter-spacing: 1px;
     filter: blur(0.1px) contrast(1.08);
+    box-shadow: none !important;
+    transition: none;
 }
-
-.btn-cta:hover {
-    background: var(--green-2);
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 12px 32px var(--green-1);
+.btn-cta .btn-cta-text {
+    display: inline-block;
+    transition: transform 0.22s cubic-bezier(0.4,0,0.2,1);
+}
+.btn-cta:hover .btn-cta-text,
+.btn-cta:focus .btn-cta-text,
+.btn-cta:active .btn-cta-text {
+    transform: scale(1.14);
+}
+.btn-cta:hover, .btn-cta:focus, .btn-cta:active {
+    background: var(--green-3) !important;
+    color: var(--white) !important;
+    box-shadow: none !important;
 }
 
 
@@ -910,20 +916,27 @@ main {
     color: #fff;
     position: relative;
     z-index: 1;
-    box-shadow: 0 2px 8px rgba(212, 165, 116, 0.10);
+    box-shadow: none !important;
     border-radius: 14px;
     font-weight: 800;
     font-size: 1.1rem;
     padding: 1.1rem 2.5rem;
     letter-spacing: 1px;
-    transition: var(--transition);
+    transition: none;
 }
-
-.promo-banner .btn-cta:hover {
-    background: var(--secondary-color);
-    color: #fff;
-    box-shadow: 0 4px 16px rgba(44, 62, 80, 0.16);
-    transform: translateY(-2px) scale(1.04);
+.promo-banner .btn-cta .btn-cta-text {
+    display: inline-block;
+    transition: transform 0.22s cubic-bezier(0.4,0,0.2,1);
+}
+.promo-banner .btn-cta:hover .btn-cta-text,
+.promo-banner .btn-cta:focus .btn-cta-text,
+.promo-banner .btn-cta:active .btn-cta-text {
+    transform: scale(1.14);
+}
+.promo-banner .btn-cta:hover, .promo-banner .btn-cta:focus, .promo-banner .btn-cta:active {
+    background: var(--accent-color) !important;
+    color: #fff !important;
+    box-shadow: none !important;
 }
 
 .cta-banner {
@@ -955,7 +968,6 @@ main {
     color: var(--text-light);
     text-align: center;
     padding: 2.5rem 0;
-    margin-top: 4rem;
     position: relative;
     overflow: hidden;
     width: 100vw;

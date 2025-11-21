@@ -29,6 +29,26 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 // Modal logic for More Info
 document.addEventListener('DOMContentLoaded', function() {
+    // Redirect Find Out More button to educate page (correct path for each content page)
+    var ctaBtns = document.querySelectorAll('.btn-cta .btn-cta-text');
+    ctaBtns.forEach(function(span) {
+        var btn = span.parentElement;
+        if (btn) {
+            btn.addEventListener('click', function(e) {
+                // Determine correct path based on current location
+                var path = window.location.pathname;
+                if (path.endsWith('/index.html') || path.endsWith('/shop/shop.html')) {
+                    window.location.href = 'educate/educate.html';
+                } else if (path.includes('/about/') || path.includes('/educate/') || path.includes('/events/') || path.includes('/story/') || path.includes('/contact/') || path.includes('/blog/')) {
+                    window.location.href = '../educate/educate.html';
+                } else if (path.endsWith('/cart/cart.html')) {
+                    window.location.href = '../educate/educate.html';
+                } else {
+                    window.location.href = 'educate/educate.html';
+                }
+            });
+        }
+    });
         // Sliding search bar logic
         const searchBtn = document.querySelector('.search-btn');
         const searchBar = document.getElementById('search-bar');
